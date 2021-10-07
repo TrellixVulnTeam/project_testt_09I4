@@ -1,35 +1,22 @@
 import "../scss/main.scss";
-import Swiper from 'swiper';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    // setTimeout(function (){
-    //     document.querySelector('.visual__container').classList.add('out');
-    // },2500);
 
-    // setInterval(function (){
-    //     document.querySelector('.down-bar span').classList.add('active');
-    // },2500);
+    setTimeout(function () {
 
-    document.querySelector('.up-button').addEventListener('click', () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
+        document.querySelector(".loading").classList.add('hide');
+    }, 2000);
 
-    let visualOffsetTop = document.querySelector("#visual").offsetTop;
-    let workOffsetTop = document.querySelector("#work").offsetTop;
-    let introduceOffsetTop = document.querySelector("#introduce").offsetTop;
-    const menus = document.querySelectorAll('.header__item a');
 
-    console.log(menus);
+    // var swiper = new Swiper(".mySwiper", {
+    //     slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
+    //     loop : true, // 슬라이드 반복 여부
 
-    // for (var i = 0 ; i < menus.length; i++) {
-    //     menus[i].addEventListener('click' , (event,button) =>{
-    //         console.log(menus[i]);
-    //         // event.preventDefault();
-    //
-    //     }) ;
-    // }
-
-    var swiper = new Swiper(".swiper", {});
+        // navigation: {
+        //     nextEl: document.querySelector(".swiper-button-next"),
+        //     prevEl: document.querySelector(".swiper-button-prev"),
+        // },
+    // });
 
 });

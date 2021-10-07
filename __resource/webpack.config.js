@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtraPlugin = require("mini-css-extract-plugin");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+// const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules : [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(sa|sc|c)ss$/,
                 use: [MiniCssExtraPlugin.loader, 'css-loader', 'sass-loader'],
                 exclude: /node_modules/
             },
@@ -28,7 +28,7 @@ module.exports = {
         new MiniCssExtraPlugin ({
             filename: "/js/common.css",
         }),
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
 
         new HtmlWebpackPlugin({
             filename: 'output.pug',
@@ -39,6 +39,6 @@ module.exports = {
         static: {
             directory: path.resolve('../dist')
         },
-        port: 8010,
+        port: 8020,
     }
 };
