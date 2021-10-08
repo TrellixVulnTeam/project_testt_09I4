@@ -26,7 +26,7 @@ module.exports = {
             template: "../index.html",
         }),
         new MiniCssExtraPlugin ({
-            filename: "./common.css",
+            filename: "/js/common.css",
         }),
         // new CleanWebpackPlugin(),
 
