@@ -26,14 +26,14 @@ module.exports = {
             template: "../index.html",
         }),
         new MiniCssExtraPlugin ({
-            filename: "/js/common.css",
+            filename: "./common.css",
         }),
         // new CleanWebpackPlugin(),
 
-        new HtmlWebpackPlugin({
-            filename: 'output.pug',
-            minify: false
-        }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'output.pug',
+        //     minify: false
+        // }),
     ],
     devServer: {
         static: {
