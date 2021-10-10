@@ -1,5 +1,4 @@
 @import "./setting.scss";
-@import "./font.scss";
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
 @import 'swiper/css';
@@ -388,12 +387,10 @@ html { font-size: 62.5%; scroll-behavior: smooth;}
       width: 50vw;
       height: 35vw;
       text-align: center;
-      padding-top: 5vh;
-      background: #ffffff;
     }
 
     .img > img {
-      width: 40vw;
+      width: 50vw;
     }
   }
 
@@ -427,10 +424,23 @@ html { font-size: 62.5%; scroll-behavior: smooth;}
   .detail {
     display: inline-block;
     width: 50vw;
-    height: 65vh;
+    height: 62vh;
     padding: 23.5vh 5vw 1vh 5vw;
     color: #000000;
     box-sizing: border-box;
+
+    a {
+      display: block;
+      width: 100px;
+      height: 26px;
+      margin-top: 2rem;
+      padding-top: 2px;
+      border: 1px solid #000000;
+      border-radius: 15px;
+      color: #000000;
+      text-align: center;
+      box-sizing: border-box;
+    }
 
   }
 
@@ -457,17 +467,142 @@ html { font-size: 62.5%; scroll-behavior: smooth;}
     }
   }
 
-  a {
-    display: block;
-    width: 100px;
-    height: 26px;
-    margin-top: 2rem;
-    padding-top: 2px;
-    border: 1px solid #000000;
-    border-radius: 15px;
-    color: #000000;
-    text-align: center;
-    box-sizing: border-box;
+  .work-all {
+    padding: 11vh;
+    background: #dbd5c9;
+
+    a {
+      display: block;
+      color: #ffffff;
+      font-size: 11vw;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    &:hover a:before{
+      width: 85vw;
+    }
+
+    a:before {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 3px;
+      margin-top: 21vh;
+      background: #ffffff;
+      transition: all ease 1s;
+      content:'';
+    }
+  }
+}
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 32vh;
+  background: #dbd5c9;
+  font-size: 5vw;
+  text-align: center;
+  box-sizing: border-box;
+
+  .rolling {
+    display: inline-block;
+    overflow: hidden;
+    width: 25vw;
+    height: 5vw;
+    line-height: 1;
+
+    &:before {
+      display: block;
+      position: absolute;
+      width: 25vw;
+      height: 2px;
+      margin-top: 6vw;
+      background:#000000;
+      content: '';
+    }
+
+    .wrap {
+      animation-name: rolling;
+      animation-duration: 5s;
+      animation-timing-function: cubic-bezier(.455,.03,.515,.955);
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes rolling {
+      0% {
+        transform: translateY(0%);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+
+  .contact_1 {
+    display: inline-block;
+  }
+
+  .contact_3 {
+    margin-top: 4vh;
+    color: #f93700;
+    font-size: 3vw;
+  }
+
+  .smiley {
+    width: 4.1vw;
+    height: 4.1vw;
+    animation-name: smiley;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.455,.03,.515,.955);
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+  }
+
+  @keyframes smiley {
+    0% {
+      transform: rotate(-15deg)
+    }
+
+    5% {
+      transform: rotate(25deg)
+    }
+
+    10% {
+      transform: rotate(-10deg)
+    }
+
+    40% {
+      transform: rotate(380deg)
+    }
+
+    50% {
+      transform: rotate(330deg)
+    }
+
+    55% {
+      transform: rotate(370deg)
+    }
+
+    80% {
+      transform: rotate(-20deg)
+    }
+
+    90% {
+      transform: rotate(30deg)
+    }
+
+    to {
+      transform: rotate(-15deg)
+    }
+  }
+
+  .contact_4 {
+    margin-bottom: 4vh;
+    font-size: 2vw;
   }
 }
 
