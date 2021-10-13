@@ -26,7 +26,7 @@ module.exports = {
             template: "../index.html",
         }),
         new MiniCssExtraPlugin ({
-            filename: "/js/common.css",
+            filename: "/common.css",
         }),
         // new CleanWebpackPlugin(),
 
@@ -39,6 +39,6 @@ module.exports = {
         static: {
             directory: path.resolve('../dist')
         },
-        port: 8020,
+        port: 8030,
     }
 };
